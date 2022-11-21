@@ -1,14 +1,3 @@
-from snowflake import *
+import snowflake
 
-colors = [
-    "white",
-    "red",
-    "green",
-    "orange",
-    "magenta",
-    "blue",
-    "black",
-    "yellow",
-    "pink",
-]
-snowflake.main(colors)
+snowflake.let_it_snow.main(3, "red")

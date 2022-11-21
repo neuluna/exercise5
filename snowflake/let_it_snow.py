@@ -2,18 +2,20 @@ import turtle
 import numpy as np
 
 
-def main(colors, speed=0, bg_color="grey"):
+def main(speed=0, bg_color="grey"):
     # create Turtle object
+    turtle_screen = turtle.Screen()
     myTurtle = turtle.Turtle()
-
+    
     # set speed to 'fastest'
     myTurtle.speed(speed)
 
     # change background color
-    turtle.Screen().bgcolor(bg_color)
-
+    turtle_screen.bgcolor(bg_color)
+  
+ 
     # TODO: define different colors here
-    # colors = ["white", "red", "green", "orange", "magenta", "blue", "black", "yellow", "pink"]
+    colors = ["white", "red", "green", "orange", "magenta", "blue", "black", "yellow", "pink"]
 
     for _ in range(10):
         # define some params
@@ -33,8 +35,6 @@ def main(colors, speed=0, bg_color="grey"):
             snowflake_branch(size, myTurtle)
             myTurtle.left(45)
 
-    input("Press Enter to continue...")
-
 
 def snowflake_branch(size, myTurtle):
     """This function draws one branch of the snowflake."""
@@ -51,15 +51,4 @@ def snowflake_branch(size, myTurtle):
 
 
 if __name__ == "__main__":
-    colors = [
-        "white",
-        "red",
-        "green",
-        "orange",
-        "magenta",
-        "blue",
-        "black",
-        "yellow",
-        "pink",
-    ]
-    main(colors)
+    main()
